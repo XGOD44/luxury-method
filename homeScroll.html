@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Cormorant Garamond";
+      scrollbar-width: none;
+      animation-duration: 800ms;
+      color: #000;
+    }
+  
+    body {
+      margin: 0;
+      background-color: #ebe0d5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure body takes at least full viewport height */
+    }
+  
+    .sidebar {
+      width: 340px;
+      background-color: #ebe0d5;
+      color: white;
+      padding: 24px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+  
+    .sidebar button {
+      background-color: #000;
+      color: #fff;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap; 
+      flex-shrink: 0;
+    }
+  
+    .sidebar button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  
+    .main-container {
+      display: flex;
+      flex: 1; /* This makes the container take available space */
+    }
+    
+    .content {
+      margin-left: 340px;
+      padding: 40px;
+      background-color: #ebe0d5;
+      color: #000;
+      width: 100%;
+      flex: 1; /* This ensures content takes available space */
+    }
+  
+    .section {
+      margin-bottom: 80px;
+    }
+  
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 16px;
+      color: #000;
+    }
+  
+    .section p {
+      line-height: 1.7;
+    }
+    p{
+        font-size: 21px;
+        
+    }
+    h2{
+      text-align: center;
+    }
+    @media screen and (max-width: 400px) {
+      .luxury-footer-content {
+      display: flex;
+     flex-direction: column;
+     gap: 30px;
+  }
+    }
+
+    @media screen and (max-width: 768px) {
+      
+      .sidebar {
+        width: 100%;
+        height: 80px;
+        padding: 16px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #ebe0d5;
+        z-index: 10;
+  
+        flex-direction: row; 
+        overflow-x: auto; 
+        overflow-y: hidden;
+        white-space: nowrap; 
+        gap: 10px;
+      }
+
+      p{
+        font-size: larger;
+      }
+
+      .sidebar button {
+        width: 200px;
+      }
+      
+      .content {
+        margin: 100px 16px 16px 16px; 
+        padding: 20px;
+      }
+    }
+    
+    a:visited {
+      color: #000;
+    }
+
+    .luxury-footer {
+      background-color: inherit; /* Beige background */
+      padding: 15px 0;
+      text-align: center;
+      font-size: 1.1rem;
+      font-family: Arial, sans-serif;
+      width: 100%;
+      margin-top: auto; /* Push to the bottom */
+      z-index: 99999999999999;
+  }
+  
+  .luxury-footer-content {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      width: 97%;
+      margin: 0 auto;
+      padding: 0 20px;
+      padding-left: 4%;
+      padding-right: 10% ;
+  }
+  
+  .luxury-footer-contact {
+      margin-right: 50px;
+      text-align: left;
+  }
+  
+  .luxury-footer small {
+      display: block;
+      margin: 5px 0;
+      color: #333;
+  }
+  
+  .luxury-footer a {
+      color: inherit;
+      text-decoration: none;
+  }
+  
+  .luxury-footer a:hover {
+      text-decoration: underline;
+  }
+  
+  .luxury-footer .social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+  }
+  
+  .luxury-footer .social-link {
+      display: inline-block;
+      margin: 0 10px;
+  }
+  
+  .luxury-footer img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <button onclick="scrollToSection('audience')">Luxury hotel marketing</button>
+    <button onclick="scrollToSection('mindmap')">Luxury real estate marketing</button>
+    <button onclick="scrollToSection('content')">Luxury fashion marketing</button>
+    <button onclick="scrollToSection('calendar')">Luxury e-commerce marketing</button>
+    <button onclick="scrollToSection('editorial')">Luxury travel marketing</button>
+    <button onclick="scrollToSection('distribution')">Luxury retail marketing</button>
+    <button onclick="scrollToSection('effectiveness')">Luxury lifestyle marketing</button>
+  </div>
+
+  <div class="main-container">
+    <div class="content">
+      <div id="audience" class="section">
+        <h2>Our Industries</h2>
+        <h2> Luxury hotel marketing <a href="https://www.luxury-method.com/industries/luxury-hospitality-marketing-agency" style="color: transparent;">agency</a></h2>
+        <div class="image"><img src="https://i.postimg.cc/K8tmV7xt/home-1.jpg" class="image" alt=""></div>
+
+        <p style="text-align: center;">Luxury hotel marketing is one of our specialties. We help the world's finest hotels and resorts attract high-end guests. With a deep understanding of the luxury hospitality industry, we create tailored digital strategies that showcase the exclusivity and elegance of your property. As a leading luxury hospitality marketing agency, we ensure your brand stands out in this competitive market.</p>
+      </div>
+
+      <div id="mindmap" class="section">
+          <h2> Luxury real estate marketing <a href="https://www.luxury-method.com/industries/luxury-real-estate-marketing" style="color: transparent;">agency</a></h2>
+          <div class="image"><img src="https://i.postimg.cc/50KJvnSW/home-2.jpg" class="image" alt=""></div>
+
+        <p style="text-align: center;">In the realm of luxury real estate, effective marketing is essential for capturing the attention of discerning buyers. We focus on showcasing high-end properties through tailored strategies that emphasize their unique features and lifestyle offerings. As a luxury real estate marketing agency, we utilize innovative digital marketing techniques to ensure your listings stand out in a competitive landscape.</p>
+      </div>
+
+      <div id="content" class="section">
+          <h2>Luxury fashion marketing <a href="https://www.luxury-method.com/industries/luxury-fashion" style="color: transparent;">agency</a></h2>
+          <div class="image"><img src="https://i.postimg.cc/W3yRtts2/home-3.jpg" class="image" alt=""></div>
+        <p style="text-align: center;">In the competitive world of luxury fashion, effective marketing is vital for connecting with discerning customers. Our expertise as a luxury fashion marketing agency allows us to craft compelling campaigns that highlight the elegance and exclusivity of your brand. By utilizing innovative digital strategies and engaging storytelling, we help elevate your fashion label, ensuring it resonates with your target audience and stands out in a crowded market.</p>
+      </div>
+
+      <div id="calendar" class="section">
+          <h2> Luxury e-commerce marketing <p style="color: transparent;">agency</p></h2>
+          <div class="image"><img src="https://i.postimg.cc/8s8qB3F9/home-4.jpg" class="image" alt=""></div>
+        <p style="text-align: center;">In today's digital landscape, effective marketing is crucial for luxury e-commerce brands looking to thrive. As a luxury e-commerce marketing agency, we specialize in creating tailored strategies that enhance your online presence and drive sales. By leveraging data-driven insights and innovative digital techniques, we help your brand connect with affluent consumers, ensuring your luxury products stand out in a competitive marketplace.</strong></p>
+      </div>
+
+      <div id="editorial" class="section">
+          <h2>Luxury travel marketing <p style="color: transparent;">agency</p></h2>
+          <div class="image"><img src="https://i.postimg.cc/1z55qn16/home-5.jpg" class="image" alt=""></div>
+        <p style="text-align: center;">The luxury travel industry demands exceptional marketing strategies to capture the attention of discerning travelers. As a luxury travel marketing agency, we specialize in crafting compelling campaigns that showcase exclusive destinations and unique experiences. By utilizing innovative digital marketing techniques and personalized storytelling, we help travel brands connect with affluent clients, ensuring your offerings stand out in a competitive landscape.</p>
+      </div>
+
+      <div id="distribution" class="section">
+          <h2> Luxury retail marketing  <p style="color: transparent;">agency</p></h2>
+          <div class="image"><img src="https://i.postimg.cc/KYRhbny9/home-6.jpg" class="image" alt=""></div>
+        <p style="text-align: center;">In the competitive landscape of luxury retail, impactful marketing is essential to attract and retain discerning customers. As a luxury retail marketing agency, we focus on creating tailored strategies that highlight the uniqueness and quality of your products. By leveraging innovative digital marketing techniques and engaging storytelling, we help elevate your brand's presence, ensuring it resonates with affluent consumers and stands out in a crowded marketplace.</p>
+      </div>
+
+      <div id="effectiveness" class="section">
+          <h2>Luxury lifestyle marketing  <p style="color: transparent;">agency</p></h2>
+          <div class="image"><img src="https://i.postimg.cc/Qt7L9hC1/home-7.jpg" class="image" alt=""></div>
+        <p style="text-align: center;">The luxury lifestyle market requires a distinct approach to capture the essence of exclusivity and sophistication. As a luxury lifestyle marketing agency, we specialize in crafting engaging campaigns that resonate with affluent audiences. By combining innovative digital marketing strategies with captivating storytelling, we highlight the unique experiences and high-quality products that define your brand, ensuring it stands out in a competitive landscape.</p>
+      </div>
+    </div>
+  </div>
+ 
+  <footer class="luxury-footer">
+      <div class="luxury-footer-content">
+          <div class="luxury-footer-contact">
+              <small>
+                  <a style="font-weight: bold; text-decoration: underline;" href="mailto:giacomo@luxury-method.com">giacomo@luxury-method.com</a>
+              </small>
+              <small>+393920034695</small>
+              <small>P.IVA: 17906211002</small>
+          </div>
+          <div class="social-icons">
+              <div class="social-link">
+                  <a href="https://www.instagram.com/luxurymethod_agency/" target="_blank">
+                      <img src="https://lh3.googleusercontent.com/SLPsSeBak5-R_C6mjEIrwY3jVWLUfZpJONkiKy0P59lcIUtYkRG5FXpZ9l7xNO_JBdBzG3hHMOwTnOPBKUfMFMKQFVJt46Y" alt="Instagram">
+                  </a>
+              </div>
+              <div class="social-link">
+                  <a href="https://x.com/luxury_method" target="_blank">
+                      <img src="https://lh4.googleusercontent.com/GpCJAY-7PzK_EucY5jmKrD50gFZqVmzCmPamjctJmjEVXa_ERyMPtB9aAgY2QK7WGhLo3Fr1eOl1eQ9LpAh1ZgQKdoqlq5w" alt="X">
+                  </a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      const yOffset = -20; 
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
